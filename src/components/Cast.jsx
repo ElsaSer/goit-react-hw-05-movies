@@ -27,6 +27,7 @@ const Cast = () => {
     };
     fetchCastData();
   }, [movieId]);
+  console.log(cast);
   if (error) {
     return <div>{error}</div>;
   }

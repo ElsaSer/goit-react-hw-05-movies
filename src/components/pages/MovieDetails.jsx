@@ -39,11 +39,11 @@ if (!movieDetails) {
     )}
     <p>{movieDetails.overview}</p>
     <p>
-      <bold>Release Date:</bold>
+    <strong>Release Date:</strong>
       {movieDetails.release_date}
     </p>
     <p>
-      <bold>Rating:</bold>
+    <strong>Rating:</strong>
       {movieDetails.vote_average}
     </p>
     <nav>
