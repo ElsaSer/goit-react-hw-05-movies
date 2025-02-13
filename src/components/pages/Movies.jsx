@@ -28,16 +28,14 @@ const Movies = () => {
   };
   return (
     <div>
-      <form onSubmit={handleSubmit} style={{ marginBottom: '20px' }}>
+      <form onSubmit={handleSubmit} >
         <input
           type="text"
           placeholder="Search for movies"
           onChange={handleChange}
-          style={{ padding: '10px', marginRight: '10px' }}
+
         />
-        <button type="submit" style={{ padding: '10px' }}>
-          Search
-        </button>
+       <button type="submit">Search</button>
       </form>
       {error && <div>Error loading movies!</div>}
       <ul>
@@ -45,12 +43,11 @@ const Movies = () => {
           const imgUrl = movie.poster_path
             ? `${IMAGE_BASE_URL}${movie.poster_path}`
             : null;
-          return (   <li key={movie.id}>
-            <Link to={`/movies/${movie.id}`}>
-              {imgUrl && <img src={imgUrl} alt={movie.title} />}
-                <span style={{ fontSize: '16px', fontWeight: '500' }}>
-                  {movie.title}
-                </span>
+          return (
+            <li key={movie.id}>
+              <Link to={`/movies/${movie.id}`}>
+                {imgUrl && <img src={imgUrl} alt={movie.title} />}
+                {movie.title}
               </Link>
             </li>
           );
