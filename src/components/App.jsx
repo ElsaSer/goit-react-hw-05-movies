@@ -1,16 +1,16 @@
+import HomePage from 'pages/HomePage';
+import MovieDetails from 'pages/MovieDetails';
+import Movies from 'pages/Movies';
+import { Routes, Route } from 'react-router-dom';
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/movies" element={<Movies />} />
+        <Route path="/movies/:movieId" element={<MovieDetails />} />
+      </Routes>
     </div>
   );
 };
+// const API_KEY = '';
